@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 import logo from "../assets/store-logo.png";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/redux/hooks";
@@ -21,11 +21,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <NavLink to="/">
-            <img
-              className="w-16"
-              src={logo}
-              alt=""
-            />
+            <img className="w-16" src={logo} alt="" />
           </NavLink>
         </div>
 
@@ -34,7 +30,6 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link.name}>
               <NavLink
-                
                 to={link.href}
                 className={({ isActive }) =>
                   isActive ? "text-slate-800 font-semibold" : "hover:text-black"
@@ -51,7 +46,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4 items-center">
             <CartOnHeader />
             <NavLink to="/dashboard">
-              <button className="hidden md:block px-4 py-2 bg-[#1E2525] text-white rounded hover:bg-[#1E2525] transition cursor-pointer">
+              <button className="hidden md:block px-4 py-2  rounded-lg  transition cursor-pointer bg-gray-600 hover:bg-gray-700 text-white">
                 Dashboard
               </button>
             </NavLink>
@@ -59,12 +54,12 @@ const Navbar = () => {
         ) : (
           <div className="hidden md:flex space-x-4">
             <NavLink to="/login">
-              <button className="px-4 py-2 border border-[#1E2525] text-[blue-600] rounded hover:bg-blue-50 transition cursor-pointer">
+              <button className="px-4 py-2 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-700 hover:text-white transition cursor-pointer">
                 Login
               </button>
             </NavLink>
             <NavLink to="/signup">
-              <button className="px-4 py-2 bg-[#1E2525] text-white rounded hover:bg-[#1E2525] transition cursor-pointer">
+              <button className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white transition cursor-pointer rounded-lg">
                 Sign Up
               </button>
             </NavLink>
@@ -89,10 +84,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden mt-4 space-y-4 text-center">
           {navLinks.map((link) => (
-            <NavLink
-              to={link.href}
-              className="block text-gray-700"
-            >
+            <NavLink to={link.href} className="block text-gray-700">
               {link.name}
             </NavLink>
           ))}

@@ -19,7 +19,7 @@ app.use('/api/v1/user', userRoute);
 app.use('/api/v1/orders', OrderRoutes);
 
 app.get('/', (req: Request, res: Response) => {
-  res.send({ message: 'Hello World!' });
+  res.send({ message: 'Server is running!' });
 });
 
 // global error handler & not found route
