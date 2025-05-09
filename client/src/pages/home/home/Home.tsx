@@ -1,3 +1,4 @@
+import FaqComponent from '@/components/FaqComponent';
 import Banner from '../banner/Banner';
 import FeaturedProducts from '../featuredProducts/FeaturedProducts';
 import Testimonials from '../testimonials/Testimonials';
@@ -8,6 +9,7 @@ const Home = () => {
             <Banner></Banner>
             <FeaturedProducts></FeaturedProducts>
             <Testimonials></Testimonials>
+            <FaqComponent/>
         </div>
     );
 };
