@@ -22,10 +22,10 @@ const FeaturedProducts = () => {
     .filter((product: productDto) => product.isFeatured)
     .slice(0, 6);
   return (
-    <section className="bg-[#FAF7F0] font-[josefin-sans]">
+    <section className=" font-[josefin-sans]">
       <div className="max-w-7xl mx-auto px-4 py-10 ">
         <div className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 text-center md:py-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center md:py-6">
             Featured Products
           </h2>
         </div>
