@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/store-logo.png";
+import logo from "../assets/logo-bw.png";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/redux/hooks";
 import { selectToken } from "@/redux/features/auth/authSlice";
@@ -17,22 +17,22 @@ const Navbar = () => {
   const isLoggedIn = useAppSelector(selectToken);
 
   return (
-    <nav className="px-6 py-2 font-[space-grotesk] bg-[#FAF7F0]">
+    <nav className="px-6 py-2 font-[space-grotesk] ">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <NavLink to="/">
-            <img className="w-16" src={logo} alt="" />
+            <img className="w-48" src={logo} alt="" />
           </NavLink>
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-10 text-gray-700 text-xl">
+        <ul className="hidden md:flex space-x-10 text-gray-600 text-xl">
           {navLinks.map((link) => (
             <li key={link.name}>
               <NavLink
                 to={link.href}
                 className={({ isActive }) =>
-                  isActive ? "text-slate-800 font-semibold" : "hover:text-black"
+                  isActive ? "text-gray-600 font-semibold" : "hover:text-black"
                 }
               >
                 {link.name}

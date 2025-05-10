@@ -2,33 +2,53 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <section
-      className="relative bg-cover bg-center h-screen md:h-[80vh] flex items-center justify-center"
-      style={{
-        backgroundImage: `url('https://plus.unsplash.com/premium_photo-1663957923326-f05b0b3912e8?q=80&w=1943&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-      }}>
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+    <>
+      
+      <div className="bg-gradient-to-b from-green-50 to-green-100">
+        <section className="py-4 sm:py-6 lg:py-8">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+              <div>
+                <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
+                  All Your Stationery Needs
+                  <div className="relative inline-flex">
+                    <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]"></span>
+                    <h1 className="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
+                      in One Place.
+                    </h1>
+                  </div>
+                </h1>
 
-      {/* Content */}
-      <div className="relative text-center text-white px-4 sm:px-6 md:px-8 max-w-2xl">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
-          All Your Stationery Needs in One Place
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl mb-6 leading-relaxed text-gray-200">
-          From pens and notebooks to office supplies — find high-quality
-          products for school, work, and creativity at affordable prices.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          {/* <button className="px-6 py-3 bg-white hover:bg-transparent border hover:border-white hover:text-white rounded text-black font-semibold transition">
-            Shop Now
-          </button> */}
-          <Link to='/products' className="px-6 py-3 border border-white hover:bg-white hover:text-black rounded text-white font-semibold transition">
-            Browse Collection
-          </Link>
-        </div>
+                <p className="mt-8 text-base text-black sm:text-xl">
+                  From pens and notebooks to office supplies — find high-quality
+                  products for school, work, and creativity at affordable
+                  prices.
+                </p>
+
+                <div className="mt-10 sm:flex sm:items-center sm:space-x-8">
+                  <Link
+                    to="/products"
+                    title=""
+                    className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-white transition-all duration-200 bg-gray-500 hover:bg-gray-600 focus:bg-gray-600 rounded-lg "
+                    role="button"
+                  >
+                    Start Exploring
+                  </Link>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  className="w-full"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/2/hero-img.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </>
   );
 };
 
