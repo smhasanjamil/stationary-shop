@@ -13,7 +13,7 @@ const PaymentFailed = () => {
           <div className="text-base mt-5">
             For any product related query, drop an email to
           </div>
-          <div className="underline">stationary.bd@gmail.com</div>
+          <div className="underline">smhasanjamil14@gmail.com</div>
 
           <Link
             to="/"

@@ -260,7 +260,7 @@ const Checkout = () => {
 
                 {/* BUTTON START */}
                 <button
-                  className="w-full  py-4 rounded-full bg-green-600 text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
+                  className="w-full  py-4 rounded-lg bg-gray-600 hover:bg-gray-700 text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
                   onClick={handlePlaceOrder}
                 >
                   Place Order

@@ -56,10 +56,7 @@ const AllProducts = () => {
           className="p-2 border"
         >
           {uniqueCategories.map((cat) => (
-            <option
-              key={cat}
-              value={cat}
-            >
+            <option key={cat} value={cat}>
               {cat}
             </option>
           ))}
@@ -80,7 +77,7 @@ const AllProducts = () => {
         <p className="text-gray-500">No products found.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProducts?.map((product: productDto, index:number) => (
+          {filteredProducts?.map((product: productDto, index: number) => (
             <ProductCard product={product} key={index}></ProductCard>
           ))}
         </div>

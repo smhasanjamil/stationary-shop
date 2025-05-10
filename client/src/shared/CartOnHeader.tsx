@@ -15,12 +15,12 @@ const CartOnHeader = () => {
     <div className="flex items-center">
       <Link
         to="/cart"
-        className="flex items-center hover:text-red-400 space-x-2"
+        className="flex items-center text-gray-600 hover:text-white space-x-2"
       >
-        <span className="font-semibold text-[16px] md:text-[20px] text-red-400">
+        <span className="font-semibold text-[16px] md:text-[20px] text-gray-400">
           {subTotal}&#2547;
         </span>
-        <div className="w-10 md:w-14 h-10 md:h-14 rounded-full flex justify-center items-center hover:bg-blue-900/[0.5] cursor-pointer relative">
+        <div className="w-10 md:w-14 h-10 md:h-14 rounded-full flex justify-center items-center hover:bg-gray-900/[0.5] cursor-pointer relative">
           <ShoppingCart />
           {cartItems.length > 0 && (
             <div className="font-bold h-[16px] md:h-[18px] min-w-[16px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-secondary text-[10px] md:text-[12px] flex justify-center items-center px-[4px] md:px-[6px]">

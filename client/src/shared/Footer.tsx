@@ -7,6 +7,8 @@ import {
   MapPin,
 } from "lucide-react";
 
+import Logo from '../assets/logo-footer.png'
+
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/all-products" },
@@ -15,9 +17,9 @@ const quickLinks = [
 ];
 
 const contactInfo = [
-  { icon: Mail, text: "support@yourshop.com" },
+  { icon: Mail, text: "support@shoptree.com" },
   { icon: Phone, text: "+880 123 456 789" },
-  { icon: MapPin, text: "Chittagong, Bangladesh" },
+  { icon: MapPin, text: "Khulna, Bangladesh" },
 ];
 
 const socialLinks = [
@@ -32,9 +34,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Info */}
         <div>
-          <h2 className="text-xl font-bold text-[#F4EEE0] mb-2">
+          {/* <h2 className="text-xl font-bold text-[#F4EEE0] mb-2">
             Stationery Shop
-          </h2>
+          </h2> */}
+          <img src={Logo}  />
           <p className="text-sm">Premium quality products at your doorstep.</p>
         </div>
 

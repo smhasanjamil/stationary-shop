@@ -77,9 +77,7 @@ const Testimonials = () => {
                 <li key={idx}>
                   <button
                     className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-gray-600 focus:ring ${
-                      currentTestimonial == idx
-                        ? "bg-gray-600"
-                        : "bg-gray-300"
+                      currentTestimonial == idx ? "bg-gray-600" : "bg-gray-300"
                     }`}
                     onClick={() => setCurrentTestimonial(idx)}
                   ></button>

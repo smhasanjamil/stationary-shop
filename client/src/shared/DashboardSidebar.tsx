@@ -68,7 +68,7 @@ export default function DashboardSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="flex h-[60px] items-center px-6">
+        <div className="flex h-[60px] items-center">
           <Link
             to="/"
             className="flex items-center gap-2 font-semibold"
@@ -107,7 +107,7 @@ export default function DashboardSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <button
-                className="w-full text-left text-red-500 hover:text-red-600"
+                className="w-full text-left text-gray-600 hover:text-gray-700"
                 onClick={handleLogout}
               >
                 <LogOut className="h-4 w-4" />

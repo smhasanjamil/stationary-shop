@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <>
-      
       <div className="bg-gradient-to-b from-green-50 to-green-100">
         <section className="py-4 sm:py-6 lg:py-8">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">

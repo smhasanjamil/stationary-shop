@@ -1,12 +1,8 @@
-
-
-
 import Banner from "../banner/Banner";
 import FeaturedProducts from "../featuredProducts/FeaturedProducts";
 import Testimonials from "../testimonials/Testimonials";
 import FAQPages from "../FAQPages/FAQPages";
-
-
+import Newsletter from "@/components/Newsletter";
 
 const Home = () => {
   return (
@@ -14,7 +10,8 @@ const Home = () => {
       <Banner></Banner>
       <FeaturedProducts></FeaturedProducts>
       <Testimonials></Testimonials>
-      <FAQPages/>
+      <FAQPages />
+      <Newsletter />
     </div>
   );
 };

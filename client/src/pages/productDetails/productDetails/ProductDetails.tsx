@@ -196,7 +196,7 @@ const ProductDetails = () => {
             disabled={product.stock === 0}
             className={`px-6 py-3 text-white font-medium rounded transition ${
               product.stock > 0
-                ? "bg-[#1E2525] hover:bg-[#1E2525]"
+                ? "bg-gray-600 hover:bg-gray-700 rounded-lg"
                 : "bg-gray-400 cursor-not-allowed"
             }`}
           >
