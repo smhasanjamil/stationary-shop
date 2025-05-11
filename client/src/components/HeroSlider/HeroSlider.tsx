@@ -1,11 +1,15 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+// @ts-expect-error: Missing type declarations for swiper CSS
 import "swiper/css";
+
+// @ts-expect-error: Missing type declarations for swiper pagination CSS
 import "swiper/css/pagination";
 
-import "./styles.css";
+// @ts-expect-error: Missing type declarations for index.css
+
+import "./style.css";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
@@ -27,14 +31,15 @@ const HeroSlider = () => {
         pagination={pagination}
         // modules={[Pagination]}
         modules={[Pagination, Autoplay]}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      loop={true}
-        className="mySwiper rounded-lg overflow-hidden"
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        className="mySwiper rounded-lg overflow-hidden mt-1"
       >
         <SwiperSlide
           className="relative h-[400px] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(https://i.ibb.co.com/bg3W435V/pexels-punttim-53874.jpg)",
+            backgroundImage:
+              "url(https://i.ibb.co.com/bg3W435V/pexels-punttim-53874.jpg)",
           }}
         >
           <div className="absolute inset-0 flex justify-center items-center z-10 text-center text-white p-5">
@@ -64,7 +69,8 @@ const HeroSlider = () => {
         <SwiperSlide
           className="relative h-[400px] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(https://i.ibb.co.com/NgW0H3Pf/pexels-rdne-7414277-1.jpg)",
+            backgroundImage:
+              "url(https://i.ibb.co.com/NgW0H3Pf/pexels-rdne-7414277-1.jpg)",
           }}
         >
           <div className="absolute inset-0 flex justify-center items-center z-10 text-center text-white p-5">
@@ -94,7 +100,8 @@ const HeroSlider = () => {
         <SwiperSlide
           className="relative h-[400px] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(https://i.ibb.co.com/qL8VD0jm/pexels-ekaterina-bolovtsova-6192519.jpg)",
+            backgroundImage:
+              "url(https://i.ibb.co.com/qL8VD0jm/pexels-ekaterina-bolovtsova-6192519.jpg)",
           }}
         >
           <div className="absolute inset-0 flex justify-center items-center z-10 text-center text-white p-5">
@@ -121,7 +128,6 @@ const HeroSlider = () => {
             </div>
           </div>
         </SwiperSlide>
-        
       </Swiper>
     </>
   );

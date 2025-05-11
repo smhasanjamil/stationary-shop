@@ -7,7 +7,7 @@ import {
   MapPin,
 } from "lucide-react";
 
-import Logo from '../assets/logo-footer.png'
+
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -37,7 +37,7 @@ const Footer = () => {
           {/* <h2 className="text-xl font-bold text-[#F4EEE0] mb-2">
             Stationery Shop
           </h2> */}
-          <img src={Logo}  />
+          <img src='https://i.ibb.co.com/tpvfBDXw/logo-footer.png'  />
           <p className="text-sm">Premium quality products at your doorstep.</p>
         </div>
 

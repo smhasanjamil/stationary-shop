@@ -1,3 +1,4 @@
+import Loader from "@/components/Loader";
 import ProductCard from "@/components/ProductCard";
 import { productDto } from "@/dto/productDto";
 import { useGetProductsQuery } from "@/redux/features/proudct/productApi";
@@ -8,13 +9,9 @@ const AllProducts = () => {
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [inStockOnly, setInStockOnly] = useState(false);
 
-  const {
-    data,
-    isError: isProductsError,
-    isLoading: isProductsLoading,
-  } = useGetProductsQuery({});
-  if (isProductsLoading) return <div>Loading...</div>;
-  if (isProductsError) return <div>Error loading products</div>;
+  const { data, isLoading: isProductsLoading } = useGetProductsQuery({});
+  if (isProductsLoading) return <Loader/>;
+
   const products: productDto[] = data?.data || [];
 
   const filteredProducts = products?.filter((product) => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo-bw.png";
+
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/redux/hooks";
 import { selectToken } from "@/redux/features/auth/authSlice";
@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <NavLink to="/">
-            <img className="w-48" src={logo} alt="" />
+            <img className="w-48" src='https://i.ibb.co.com/d0rYRBhh/logo-bw.png' alt="" />
           </NavLink>
         </div>
 

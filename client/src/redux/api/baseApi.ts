@@ -11,6 +11,7 @@ export const tagTypes = {
 export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({
+    // @ts-expect-error: VITE_API_URL is not typed on ImportMeta by default
     baseUrl: import.meta.env.VITE_API_URL + "/api/v1",
     credentials: "include",
     prepareHeaders: (headers, { getState }) => {

@@ -17,7 +17,7 @@ body {
 } */
 
 .swiper {
-  width: 95%;
+  width: 92%;
   height: 450px;
 }
 
@@ -54,14 +54,3 @@ body {
   color: #fff;
   background: #007aff;
 }
-
-
-
-/* SwiperSlide */
-/* .slide1 {
-  background-image: url('https://i.ibb.co/rKdvNHTK/slider1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-

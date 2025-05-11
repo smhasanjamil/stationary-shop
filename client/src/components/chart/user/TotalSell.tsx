@@ -23,6 +23,7 @@ import {
 } from "@/redux/features/order/orderApi";
 import { useAppSelector } from "@/redux/hooks";
 import { selectUser } from "@/redux/features/auth/authSlice";
+import Loader from "@/components/Loader";
 
 type Order = {
   totalAmount?: number;
@@ -93,7 +94,7 @@ export function TotalSell() {
     },
   } satisfies ChartConfig;
 
-  if (isGetLoading) return <div>Loading...</div>;
+  if (isGetLoading) return <Loader/>;
 
   return (
     <>

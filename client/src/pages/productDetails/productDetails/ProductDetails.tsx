@@ -7,6 +7,7 @@ import { useGetSingleProductQuery } from "@/redux/features/proudct/productApi";
 import { productDto } from "@/dto/productDto";
 import FormatTaka from "@/components/FormatTaka";
 import { ShoppingBag } from "lucide-react";
+import Loader from "@/components/Loader";
 
 const ProductDetails = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -20,7 +21,7 @@ const ProductDetails = () => {
   const { data, isError, isLoading } = useGetSingleProductQuery({ productId });
   const navigate = useNavigate();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader/>;
   if (isError) return <div>Error loading product</div>;
 
   const product: productDto = data?.data;

@@ -31,6 +31,7 @@ import {
 import { TAuthUser } from "@/redux/features/auth/authSlice";
 import { userDto } from "@/dto/userDto";
 import { toast } from "sonner";
+import Loader from "@/components/Loader";
 
 type Props = {
   id?: string;
@@ -148,7 +149,7 @@ export default function UserProfile({ id, user }: Props) {
   };
 
   if (isGetLoading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
   if (isGetError) {
     return <div>Error loading user data</div>;

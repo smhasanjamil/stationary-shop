@@ -23,6 +23,7 @@ import {
 } from "@/redux/features/order/orderApi";
 import { useAppSelector } from "@/redux/hooks";
 import { selectUser } from "@/redux/features/auth/authSlice";
+import Loader from "@/components/Loader";
 
 export function TotalOrder() {
   const user = useAppSelector(selectUser);
@@ -66,7 +67,7 @@ export function TotalOrder() {
   const totalOrderNumber = data?.data?.length || 0;
   const totalOrderNumberAdmin = ordersData?.data?.length || 0;
 
-  if (isGetLoading) return <div>Loading...</div>;
+  if (isGetLoading) return <Loader/>;
 
   return (
     <>
