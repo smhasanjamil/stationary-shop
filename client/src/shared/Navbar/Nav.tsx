@@ -68,7 +68,7 @@ const dropdownNavs = [
       {
         title: "Community",
         desc: "Duis aute irure dolor in reprehenderit",
-        path: "javascript:void(0)",
+        path: "#",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -129,6 +129,8 @@ const dropdownNavs = [
 ];
 
 export const Nav = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
   const isLoggedIn = useAppSelector(selectToken);
   const [state, setState] = useState(false);
   const [drapdownState, setDrapdownState] = useState<{
@@ -145,7 +147,10 @@ export const Nav = () => {
       isDrapdown: true,
       navs: dropdownNavs,
     },
-    { title: "About", path: "/about", isDrapdown: false },
+    { title: "Featured", path: "/featured", isDrapdown: false },
+    { title: "Top Selling", path: "/top-selling", isDrapdown: false },
+    { title: "Great Deals", path: "/greate=deals", isDrapdown: false },
+    { title: "Events", path: "/events", isDrapdown: false },
   ];
 
   useEffect(() => {
@@ -156,20 +161,33 @@ export const Nav = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <nav
-        className={`relative z-20 bg-white w-full md:static md:text-sm md:border-none ${
+        // className={`relative z-20 bg-white w-full md:static md:text-sm md:border-none ${
+        //   state ? "shadow-lg rounded-b-xl md:shadow-none" : ""
+        // }`}
+        className={`sticky top-0 w-full z-50 bg-white transition-all duration-300 ${
+          hasScrolled ? "shadow-lg border-b" : ""
+        } md:text-sm md:border-none ${
           state ? "shadow-lg rounded-b-xl md:shadow-none" : ""
         }`}
       >
-        <div className="items-center gap-x-14 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+        <div className="items-center gap-x-14 px-4 max-w-screen-xl mx-auto md:flex ">
+          <div className="flex items-center justify-between py-2 md:block">
             <Link to="/">
               <img
                 src="https://i.ibb.co.com/d0rYRBhh/logo-bw.png"
-                width={150}
-                height={80}
+                width={120}
+                height={50}
                 alt="logo"
               />
             </Link>
@@ -216,7 +234,7 @@ export const Nav = () => {
             <ul className="items-center space-y-6 md:flex md:space-x-6 md:space-y-0 ">
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className="text-lg">
+                  <li key={idx} >
                     {item.isDrapdown ? (
                       <button
                         className="w-full flex items-center justify-between gap-1 text-gray-700 hover:text-gray-600"
@@ -319,7 +337,7 @@ export const Nav = () => {
                   </div>
                 </div>
               ) : (
-                <div className="flex-1 items-center justify-end gap-x-6 space-y-3 text-lg md:flex md:space-y-0">
+                <div className="flex-1 items-center justify-end gap-x-6 space-y-3  md:flex md:space-y-0">
                   <li>
                     <Link
                       to="/login"

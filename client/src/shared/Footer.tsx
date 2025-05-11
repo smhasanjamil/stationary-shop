@@ -6,12 +6,13 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "Products", href: "/all-products" },
+  { name: "Products", href: "/products" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -30,7 +31,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1E2525] text-gray-300 py-10 font-[gosefin-sans]">
+    <footer className="bg-black text-gray-300 py-10 font-[gosefin-sans]">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Info */}
         <div>
@@ -49,9 +50,9 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             {quickLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.href} className="hover:text-[#F4EEE0]">
+                <Link to={link.href} className="hover:text-[#F4EEE0]">
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

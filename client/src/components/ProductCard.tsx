@@ -48,7 +48,7 @@ export default function ProductCard({ product }: { product: productDto }) {
                       </p>
                     </div>
 
-                    <button className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2.5 rounded-lg transition-colors">
+                    <button className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2.5 rounded-lg transition-colors cursor-pointer">
                       View Details
                     </button>
                   </div>

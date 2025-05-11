@@ -44,8 +44,14 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div
+      className=" py-14 px-4 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage:
+          "url(https://i.ibb.co.com/1tNXrwWV/pexels-luna-lovegood-4087394.jpg)",
+      }}
+    >
+      <div className="max-w-lg py-6 rounded-lg mx-auto px-4 text-gray-600 md:px-8 bg-white ">
         <div className="max-w-lg mx-auto space-y-3 sm:text-center">
           <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
             Create Your Account
@@ -55,10 +61,7 @@ const SignUp = () => {
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="space-y-5"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <div>
               <label className="font-medium">Full Name</label>
               <input
