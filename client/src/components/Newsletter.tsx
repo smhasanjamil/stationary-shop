@@ -1,51 +1,41 @@
 const Newsletter = () => {
   return (
     <>
-      <section className="py-14">
-        <h3 className="text-center text-3xl font-bold text-gray-600 mb-6">
-          Subscribe to our newsletter
-        </h3>
-        <div className="max-w-screen-xl mx-auto px-4 justify-between items-center gap-12 md:px-8 md:flex">
-          <div className="flex-1 max-w-xl">
-            <h3 className="text-2xl text-gray-800 font-semibold">
-              Get all of our updates directly to your inbox.
-            </h3>
-            <p className="text-gray-600 mt-3">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div className="mt-6 md:mt-0">
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="items-center gap-x-3 space-y-3 sm:space-y-0 md:space-y-3 sm:flex md:block"
-            >
-              <div className="relative">
-                <svg
-                  className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                  />
-                </svg>
+      <section className="py-14 max-w-screen-xl mx-auto">
+        <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-gray-600 md:px-8 md:mx-8">
+          <div className="relative z-10 max-w-xl mx-auto sm:text-center">
+            <div className="space-y-3">
+              <h3 className="text-3xl text-white font-bold">
+                Stay Updated with Our Latest Products and Exclusive Offers!
+              </h3>
+              <p className="text-blue-100 leading-relaxed">
+                Stay informed with the latest product updates, exclusive
+                promotions, and helpful tips. Subscribe now to receive valuable
+                insights, news, and special offers directly to your inbox.
+              </p>
+            </div>
+            <div className="mt-6">
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="flex items-center justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto"
+              >
                 <input
                   type="email"
-                  required
                   placeholder="Enter your email"
-                  className="w-full pl-12 pr-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-600 shadow-sm rounded-lg sm:max-w-xs"
+                  className="text-gray-500 w-full p-2 outline-none"
                 />
-              </div>
-              <button className="block w-full py-3 px-4 font-medium text-sm text-center text-white bg-gray-600 hover:bg-gray-500 active:bg-gray-700 active:shadow-none rounded-lg shadow sm:w-auto md:w-full">
-                Subscribe
-              </button>
-            </form>
+                <button className="p-2 px-3 rounded-lg font-medium text-white bg-gray-600 hover:bg-gray-500 active:bg-gray-700 duration-150 outline-none shadow-md focus:shadow-none sm:px-4">
+                  Subscribe
+                </button>
+              </form>
+              <p className="mt-3 max-w-lg text-[15px] text-blue-100 sm:mx-auto">
+                No spam ever, we are care about the protection of your data.
+                Read our{" "}
+                <a className="underline" href="#">
+                  Privacy Policy
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </section>

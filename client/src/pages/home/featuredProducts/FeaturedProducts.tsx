@@ -25,8 +25,10 @@ const FeaturedProducts = () => {
     <section className=" font-[josefin-sans]">
       <div className="max-w-7xl mx-auto px-4 py-10 ">
         <div className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center md:py-6">
-            Featured Products
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center md:py-6 ">
+            <span className="border-b-4 border-gray-400">
+              Featured Products
+            </span>
           </h2>
         </div>
 

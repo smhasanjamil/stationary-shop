@@ -27,10 +27,10 @@ const Testimonials = () => {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   return (
-    <div className="py-10">
+    <div className="pb-10 pt-6">
       <div>
         <h3 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center ">
-          Testimonials
+          <span className="border-b-4 border-gray-400">Testimonials</span>
         </h3>
       </div>
       <section className="pt-2">

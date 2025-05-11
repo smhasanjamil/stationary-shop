@@ -106,7 +106,9 @@ const FaqComponent = () => {
     <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
       <div className="space-y-3 text-center">
         <h1 className="text-3xl text-gray-800 font-semibold">
-          Frequently Asked Questions
+          <span className="border-b-4 border-gray-400">
+            Frequently Asked Questions
+          </span>
         </h1>
         <p className="text-gray-600 max-w-lg mx-auto text-lg">
           Answered all frequently asked questions, Still confused? feel free to
