@@ -11,7 +11,7 @@ const dropdownNavs = [
     navs: [
       {
         title: "All Products",
-        desc: "Duis aute irure dolor in reprehenderit",
+        desc: "Discover our full range of stationery essentials.",
         path: "/products",
         icon: (
           <svg
@@ -26,7 +26,7 @@ const dropdownNavs = [
       },
       {
         title: "Reports",
-        desc: "Duis aute irure dolor in reprehenderit",
+        desc: "View detailed reports to track product performance and user activity.",
         path: "#",
         icon: (
           <svg
@@ -52,7 +52,7 @@ const dropdownNavs = [
     navs: [
       {
         title: "Category",
-        desc: "Duis aute irure dolor in reprehenderit",
+        desc: "Explore products by category to find exactly what you need.",
         path: "products",
         icon: (
           <svg
@@ -67,7 +67,7 @@ const dropdownNavs = [
       },
       {
         title: "Community",
-        desc: "Duis aute irure dolor in reprehenderit",
+        desc: " Join our community to collaborate, share insights, and grow together.",
         path: "#",
         icon: (
           <svg
@@ -87,7 +87,7 @@ const dropdownNavs = [
     navs: [
       {
         title: "About us",
-        desc: "Duis aute irure dolor in reprehenderit",
+        desc: " Learn more about our mission, values, and the story behind our brand.",
         path: "/about",
         icon: (
           <svg
@@ -106,7 +106,7 @@ const dropdownNavs = [
       },
       {
         title: "Careers",
-        desc: "Duis aute irure dolor in reprehenderit",
+        desc: "Explore exciting career opportunities and take the next step in your professional journey.",
         path: "#",
         icon: (
           <svg

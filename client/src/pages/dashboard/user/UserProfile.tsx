@@ -149,7 +149,7 @@ export default function UserProfile({ id, user }: Props) {
   };
 
   if (isGetLoading) {
-    return <Loader/>;
+    return <Loader />;
   }
   if (isGetError) {
     return <div>Error loading user data</div>;
@@ -159,7 +159,7 @@ export default function UserProfile({ id, user }: Props) {
     return <div>User not found</div>;
   }
   return (
-    <div className="container mx-auto py-6 max-w-3xl">
+    <div className="container mx-auto py-6 w-full">
       <h1 className="text-2xl font-bold mb-6">User Profile</h1>
 
       {/* using a single component to both show and edit */}
@@ -404,17 +404,11 @@ export default function UserProfile({ id, user }: Props) {
         </CardContent>
         {isEditing && (
           <CardFooter className="flex justify-end gap-2">
-            <Button
-              variant="outline"
-              onClick={handleCancel}
-            >
+            <Button variant="outline" onClick={handleCancel}>
               <X className="h-4 w-4 mr-2" />
               Cancel
             </Button>
-            <Button
-              onClick={handleSave}
-              disabled={isUpdateLoading}
-            >
+            <Button onClick={handleSave} disabled={isUpdateLoading}>
               <Save className="h-4 w-4 mr-2" />
               {isUpdateLoading ? "Saving..." : "Save Changes"}
             </Button>
