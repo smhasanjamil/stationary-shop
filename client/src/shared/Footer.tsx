@@ -8,8 +8,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-
-
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
@@ -31,14 +29,19 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 py-10 font-[gosefin-sans]">
+    <footer
+      className="bg-black text-gray-300 py-10 font-[gosefin-sans]"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Info */}
         <div>
           {/* <h2 className="text-xl font-bold text-[#F4EEE0] mb-2">
             Stationery Shop
           </h2> */}
-          <img src='https://i.ibb.co.com/tpvfBDXw/logo-footer.png'  />
+          <img src="https://i.ibb.co.com/tpvfBDXw/logo-footer.png" />
           <p className="text-sm">Premium quality products at your doorstep.</p>
         </div>
 
@@ -84,7 +87,8 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#F4EEE0]">
+                className="hover:text-[#F4EEE0]"
+              >
                 <social.icon size={20} />
               </a>
             ))}

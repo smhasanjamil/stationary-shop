@@ -8,13 +8,14 @@ export default function ProductCard({ product }: { product: productDto }) {
       <div className={"h-full"}>
         {product !== undefined && (
           <Link to={`/products/${product?._id}`}>
-            <div className="  flex items-center justify-center ">
-              <div className="w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all flex flex-col min-h-[430px]">
-                <div className="relative">
+            <div className="flex items-center justify-center ">
+              <div className="group w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all flex flex-col min-h-[430px]">
+                <div className="relative overflow-hidden">
                   <img
                     src={product.images[0]}
                     alt={product.name}
-                    className="w-full h-52 object-cover"
+                    className="w-full h-52 object-cover transition-transform duration-300 ease-in-out 
+                      group-hover:scale-105"
                   />
                   <span className="absolute top-3 right-3 bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {product.category}

@@ -105,8 +105,8 @@ const FaqComponent = () => {
   return (
     <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
       <div className="space-y-3 text-center">
-        <h1 className="text-3xl text-gray-800 font-semibold">
-          <span className="border-b-4 border-gray-400">
+        <h1 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center ">
+          <span className="border-b-4 border-red-400">
             Frequently Asked Questions
           </span>
         </h1>

@@ -26,7 +26,12 @@ const HeroSlider = () => {
     },
   };
   return (
-    <>
+    <div
+      className="bg-gray-100"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1000"
+    >
       <Swiper
         pagination={pagination}
         // modules={[Pagination]}
@@ -47,7 +52,7 @@ const HeroSlider = () => {
               className=" p-5 rounded-lg"
               style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             >
-              <h2 className="text-3xl sm:text-2xl font-bold mb-4">
+              <h2 className="text-3xl sm:text-2xl font-semibold mb-4">
                 All Your Stationery Needs in One Place.
               </h2>
               <p className="text-lg sm:text-base mb-4">
@@ -58,7 +63,7 @@ const HeroSlider = () => {
               <Link
                 to="/products"
                 title=""
-                className="inline-flex items-center justify-center px-4 py-2 font-semibold text-white transition-all duration-200 bg-gray-600 hover:bg-gray-700 focus:bg-gray-600 rounded-lg "
+                className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-all duration-200 bg-gray-600 hover:bg-gray-700 focus:bg-gray-600 rounded-lg "
                 role="button"
               >
                 Start Exploring
@@ -78,7 +83,7 @@ const HeroSlider = () => {
               className=" p-5 rounded-lg"
               style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             >
-              <h2 className="text-3xl sm:text-2xl font-bold mb-4">
+              <h2 className="text-3xl sm:text-2xl font-semibold mb-4">
                 All Your Stationery Needs in One Place.
               </h2>
               <p className="text-lg sm:text-base mb-4">
@@ -89,7 +94,7 @@ const HeroSlider = () => {
               <Link
                 to="/products"
                 title=""
-                className="inline-flex items-center justify-center px-4 py-2 font-semibold text-white transition-all duration-200 bg-gray-600 hover:bg-gray-700 focus:bg-gray-600 rounded-lg "
+                className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-all duration-200 bg-gray-600 hover:bg-gray-700 focus:bg-gray-600 rounded-lg "
                 role="button"
               >
                 Start Exploring
@@ -109,7 +114,7 @@ const HeroSlider = () => {
               className=" p-5 rounded-lg"
               style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             >
-              <h2 className="text-3xl sm:text-2xl font-bold mb-4">
+              <h2 className="text-3xl sm:text-2xl font-semibold mb-4">
                 All Your Stationery Needs in One Place.
               </h2>
               <p className="text-lg sm:text-base mb-4">
@@ -120,7 +125,7 @@ const HeroSlider = () => {
               <Link
                 to="/products"
                 title=""
-                className="inline-flex items-center justify-center px-4 py-2 font-semibold text-white transition-all duration-200 bg-gray-600 hover:bg-gray-700 focus:bg-gray-600 rounded-lg "
+                className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-all duration-200 bg-gray-600 hover:bg-gray-700 focus:bg-gray-600 rounded-lg "
                 role="button"
               >
                 Start Exploring
@@ -129,7 +134,7 @@ const HeroSlider = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

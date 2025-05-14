@@ -1,7 +1,12 @@
 const Newsletter = () => {
   return (
     <>
-      <section className="py-14 max-w-screen-xl mx-auto">
+      <section
+        className="py-14 max-w-screen-xl mx-auto"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="2000"
+      >
         <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-gray-600 md:px-8 md:mx-8">
           <div className="relative z-10 max-w-xl mx-auto sm:text-center">
             <div className="space-y-3">

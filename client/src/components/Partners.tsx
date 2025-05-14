@@ -1,10 +1,15 @@
 const Partners = () => {
   return (
-    <div className="pb-8 pt-6">
+    <div
+      className="pb-8 pt-6 bg-gray-100"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mx-auto text-center">
-          <h3 className="text-gray-800 text-3xl font-semibold ">
-            <span className="border-b-4 border-gray-400">
+          <h3 className="text-2xl md:text-3xl font-semibold text-gray-600 text-center ">
+            <span className="border-b-4 border-red-400">
               Our Trusted Partners
             </span>
           </h3>
