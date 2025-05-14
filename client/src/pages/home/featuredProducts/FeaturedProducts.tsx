@@ -1,9 +1,7 @@
 import Loader from "@/components/Loader";
 import ProductCard from "@/components/ProductCard";
-import { Button } from "@/components/ui/button";
 import { productDto } from "@/dto/productDto";
 import { useGetProductsQuery } from "@/redux/features/proudct/productApi";
-import { NavLink } from "react-router-dom";
 
 const FeaturedProducts = () => {
   const { data, isLoading, isError } = useGetProductsQuery({});
@@ -32,18 +30,12 @@ const FeaturedProducts = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 auto-rows-fr">
           {featured.map((product: productDto) => (
             <ProductCard key={product._id} product={product} />
           ))}
         </div>
-        <div className="flex justify-center mt-6">
-          <NavLink to={`/products`}>
-            <Button className="bg-gray-600 text-white hover:bg-gray-700 transition duration-300 ease-in-out cursor-pointer px-4 py-4">
-              View All Products
-            </Button>
-          </NavLink>
-        </div>
+        
       </div>
     </section>
   );

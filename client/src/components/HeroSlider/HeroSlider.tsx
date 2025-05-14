@@ -45,7 +45,7 @@ const HeroSlider = () => {
           <div className="absolute inset-0 flex justify-center items-center z-10 text-center text-white p-5">
             <div
               className=" p-5 rounded-lg"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             >
               <h2 className="text-3xl sm:text-2xl font-bold mb-4">
                 All Your Stationery Needs in One Place.
@@ -76,7 +76,7 @@ const HeroSlider = () => {
           <div className="absolute inset-0 flex justify-center items-center z-10 text-center text-white p-5">
             <div
               className=" p-5 rounded-lg"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             >
               <h2 className="text-3xl sm:text-2xl font-bold mb-4">
                 All Your Stationery Needs in One Place.
@@ -107,7 +107,7 @@ const HeroSlider = () => {
           <div className="absolute inset-0 flex justify-center items-center z-10 text-center text-white p-5">
             <div
               className=" p-5 rounded-lg"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             >
               <h2 className="text-3xl sm:text-2xl font-bold mb-4">
                 All Your Stationery Needs in One Place.
