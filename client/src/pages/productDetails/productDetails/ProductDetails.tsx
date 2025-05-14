@@ -109,13 +109,13 @@ const ProductDetails = () => {
           <img
             src={product.images[0]}
             alt={product.name}
-            className="w-full max-h-[500px] rounded-lg shadow"
+            className="w-full max-h-[550px] rounded-lg shadow"
           />
         </div>
 
         <div className="space-y-5">
-          <h2 className="text-3xl font-bold text-gray-800">{product.name}</h2>
-          <p className="text-gray-600 text-lg">{product.description}</p>
+          <h2 className="text-3xl font-bold text-gray-800">{product?.name}</h2>
+          <p className="text-gray-600 text-lg">{product?.description}</p>
 
           <div className="text-lg text-gray-700">
             <p>
@@ -202,7 +202,7 @@ const ProductDetails = () => {
           <button
             onClick={handleAddToCart}
             disabled={product.stock === 0}
-            className={`px-6 py-3 text-white font-medium rounded transition ${
+            className={` w-full npx-6 py-3 text-white font-medium rounded transition ${
               product.stock > 0
                 ? "bg-gray-600 hover:bg-gray-700 rounded-lg"
                 : "bg-gray-400 cursor-not-allowed"
@@ -212,11 +212,11 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
-      <div className="mt-6 mb-1 flex md:flex-row flex-col justify-evenly">
+      <div className=" mt-6 mb-1 flex md:flex-row flex-col justify-evenly">
         <Button
           onClick={() => setActive("details")}
           variant="ghost"
-          className="text-3xl  hover:bg-gray-600 hover:text-white rounded-lg"
+          className=" hover:bg-gray-600 hover:text-white rounded-lg    text-3xl font-bold text-gray-800"
         >
           Details
         </Button>
@@ -224,7 +224,7 @@ const ProductDetails = () => {
         <Button
           onClick={() => setActive("reviews")}
           variant="ghost"
-          className="text-3xl  hover:bg-gray-600 hover:text-white rounded-lg"
+          className=" hover:bg-gray-600 hover:text-white rounded-lg text-3xl font-bold text-gray-800"
         >
           Reviews
         </Button>
@@ -232,66 +232,48 @@ const ProductDetails = () => {
       <Separator className="!h-[2px] mb-4" />
       {active === "details" && (
         <div className="px-2">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Essential Stationery Set – Your Daily Productivity Partner
-          </h2>
-          <p className="text-gray-600">
-            Stay organized and productive with the Essential Stationery Set,
-            designed for students, professionals, and anyone who appreciates
-            quality stationery. Whether you're writing notes, planning your day,
-            or highlighting key points, this all-in-one set has you covered.
-          </p>
+          <h2 className="text-3xl font-bold text-gray-800">{product?.name}</h2>
+          <p className="text-gray-600 text-lg">{product?.description}</p>
           <div className="mb-6">
-            <h3 className="text-xl font-medium text-gray-800 mb-2">
-              What&rsquo;s Included:
-            </h3>
+            <h3 className="font-semibold text-lg">What&rsquo;s Included:</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
               <li>
-                <span className="font-semibold">✍️ Smooth ballpoint pens</span>{" "}
-                – Comfortable grip and quick-dry ink for clean writing
+                <span className="font-semibold text-lg">
+                  Smooth ballpoint pens
+                </span>
+                <span className="text-gray-600 text-lg">
+                  – Comfortable grip and quick-dry ink for clean writing
+                </span>
               </li>
               <li>
-                <span className="font-semibold">📒 Durable notebook</span> –
-                Thick, bleed-resistant pages perfect for daily notes
+                <span className="font-semibold text-lg">Durable notebook</span>
+                <span className="text-gray-600 text-lg">
+                  – Thick, bleed-resistant pages perfect for daily notes
+                </span>
               </li>
               <li>
-                <span className="font-semibold">🗒️ Sticky notes</span> – Great
-                for quick reminders, bookmarks, and labeling
+                <span className="font-semibold text-lg">Sticky notes</span>
+                <span className="text-gray-600 text-lg">
+                  – Great for quick reminders, bookmarks, and labeling
+                </span>
               </li>
               <li>
-                <span className="font-semibold">✨ Bright highlighters</span> –
-                Easily mark important lines and headings
+                <span className="font-semibold text-lg">
+                  Bright highlighters
+                </span>
+                <span className="text-gray-600 text-lg">
+                  {" "}
+                  – Easily mark important lines and headings
+                </span>
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-xl font-medium text-gray-800 mb-2">
-              🔹 Why You’ll Love It:
-            </h3>
-            <ul className="list-check pl-6 space-y-2 text-gray-600">
-              <li>Lightweight and easy to carry</li>
-              <li>Perfect for school, office, or home use</li>
-              <li>Stylish, functional, and long-lasting</li>
-              <li>A thoughtful gift for students or coworkers</li>
-            </ul>
-          </div>
-
-          <p className="mt-6 text-gray-600">
-            From lectures to meetings, this set helps you stay prepared and
-            focused. Keep everything you need in one place with the{" "}
-            <strong>Essential Stationery Set</strong> — simple tools for smarter
-            work.
-          </p>
         </div>
       )}
       {active === "reviews" && (
         <div className="px-2">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Customer Reviews
-          </h2>
-
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-semibold text-gray-800">
+            <h2 className="text-3xl font-semibold text-gray-800">
               Customer Ratings
             </h2>
             <p className="text-lg text-yellow-500 font-bold mt-2">
@@ -304,7 +286,7 @@ const ProductDetails = () => {
                   return (
                     <Star
                       key={i}
-                      className="text-yellow-400 fill-yellow-400 w-5 h-5"
+                      className="text-yellow-400 fill-yellow-400 w-5 h-5 "
                     />
                   );
                 } else if (averageRating >= i + 0.5) {
@@ -316,12 +298,12 @@ const ProductDetails = () => {
                   );
                 } else {
                   return (
-                    <StarEmpty key={i} className="text-gray-300 w-5 h-5" />
+                    <StarEmpty key={i} className="text-gray-300  w-5 h-5" />
                   );
                 }
               })}
             </div>
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-lg text-gray-500 mt-1">
               {totalRatings} total reviews
             </p>
           </div>
@@ -333,8 +315,8 @@ const ProductDetails = () => {
               const percentage = (count / totalRatings) * 100;
 
               return (
-                <div key={star} className="flex items-center">
-                  <span className="w-12 text-sm font-medium text-gray-600">
+                <div key={star} className="flex items-center ">
+                  <span className="w-12 text-lg font-medium text-gray-600">
                     {star} Star
                   </span>
                   <div className="flex-1 mx-2 h-3 bg-gray-200 rounded-full overflow-hidden">
@@ -343,7 +325,7 @@ const ProductDetails = () => {
                       style={{ width: `${percentage}%` }}
                     ></div>
                   </div>
-                  <span className="text-sm text-gray-500 w-10 text-right">
+                  <span className="text-lg text-gray-500 w-10 text-right">
                     {count}
                   </span>
                 </div>
